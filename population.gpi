@@ -1,0 +1,17 @@
+set term pngcairo transparent size 1200,800
+set border linecolor "#4fe3ff"
+set title  "{/:Bold Pikmin Population (Newgame + Postgame)}" textcolor "#4fe3ff"
+set xlabel "{/:Bold Days}" textcolor "#4fe3ff"
+set ylabel "{/:Bold Population}" textcolor "#4fe3ff"
+unset key
+set grid xtics linecolor "#0f4f6a" ytics linecolor "#0f4f6a"
+set datafile separator "\t"
+plot \
+    "population.tsv" using 2:xtic(1) with linespoints linecolor "#ff0000" pointtype 7 pointsize 1, \
+    "population.tsv" using 3:xtic(1) with linespoints linecolor "#ffff00" pointtype 7 pointsize 1, \
+    "population.tsv" using 4:xtic(1) with linespoints linecolor "#0000ff" pointtype 7 pointsize 1, \
+    "population.tsv" using 5:xtic(1) with linespoints linecolor "#00b7ce" pointtype 7 pointsize 1, \
+    "population.tsv" using 6:xtic(1) with linespoints linecolor "#9a9a9a" pointtype 7 pointsize 1, \
+    "population.tsv" using 7:xtic(1) with linespoints linecolor "#ff6bc5" pointtype 7 pointsize 1, \
+    "population.tsv" using 8:xtic(1) with linespoints linecolor "#ffffff" pointtype 7 pointsize 1, \
+    "population.tsv" using 9:xtic(1) with linespoints linecolor "#9d4c98" pointtype 7 pointsize 1

@@ -8,7 +8,7 @@ image::docs/population.png[pikmin population chart]
 
 [source,bash]
 ----
-sudo apt install -y gnuplot make imagemagick
+sudo apt-get install -y gnuplot make imagemagick
 ----
 
 [start=2]
